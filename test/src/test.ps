@@ -1,4 +1,0 @@
-Get-WinEvent -FilterHashtable @{
-    LogName = 'Security'
-    ID = 4624
-} | Select-Object -First 5 | Select-Object TimeCreated, UserID, LogonType, MachineName
