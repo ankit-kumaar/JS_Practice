@@ -41,3 +41,30 @@ const myFunction = function(){
 console.log(typeof anotherId);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++
+
+//Memory
+// stack(Primitive--> get a copy), Heap(Non-Primitive --> original value reference)
+ 
+//example->stack memory
+let myYoutubename = " bbkvines"
+let anotherName= myYoutubename // --> as being the primitive datatype anotherName will get a copy myYoutubename in the stack
+anotherName= "bhuban bam" //--> the "bbkvines" will change to "bhuvan bam" in the copy made in the stack not in the myYoutubename variable.
+
+console.log(myYoutubename);//-> will remain as bbkvines
+console.log(anotherName);//-> the change in the copy of myYoutubename variable will be displayed
+
+//example->heap memory
+let userOne={
+    email: "abc@gmail.com",
+    upi: "123@ybl"
+}
+
+let userTwo = userOne //here the direct reference is passed from heap
+
+userTwo.email = "xyz@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
